@@ -34,6 +34,12 @@ class PostTableViewCell: UITableViewCell {
         preview_text.text = post.preview_text ?? ""
         likesCount.text = "🖤 \(post.likes_count ?? 0)"
         timeshamp.text = dateDiff(time: post.timeshamp ?? 0)
+        settings()
+    }
+    private func settings(){
+        if self.preview_text.calculateMaxLines() <= 2{
+            self.showDetailOutlet.isHidden = true
+        }
     }
     private func dateDiff(time:Int)->String{
         var date = Date(timeIntervalSince1970: TimeInterval(time))

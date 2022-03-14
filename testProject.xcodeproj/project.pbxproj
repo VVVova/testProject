@@ -28,6 +28,7 @@
 		AFC61D7727DE268A001D6F1E /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC61D7627DE268A001D6F1E /* Globals.swift */; };
 		AFC61D7A27DE757D001D6F1E /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC61D7827DE757D001D6F1E /* ImageTableViewCell.swift */; };
 		AFC61D7B27DE757D001D6F1E /* ImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFC61D7927DE757D001D6F1E /* ImageTableViewCell.xib */; };
+		AFC61D7D27DF1F76001D6F1E /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC61D7C27DF1F76001D6F1E /* extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		AFC61D7627DE268A001D6F1E /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
 		AFC61D7827DE757D001D6F1E /* ImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
 		AFC61D7927DE757D001D6F1E /* ImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageTableViewCell.xib; sourceTree = "<group>"; };
+		AFC61D7C27DF1F76001D6F1E /* extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 				AFC61D2E27DE13E0001D6F1E /* AppDelegate.swift */,
 				AFC61D3027DE13E0001D6F1E /* SceneDelegate.swift */,
 				AFC61D7627DE268A001D6F1E /* Globals.swift */,
+				AFC61D7C27DF1F76001D6F1E /* extension.swift */,
 				AFC61D6327DE144F001D6F1E /* Model */,
 				AFC61D6227DE1445001D6F1E /* ViewModel */,
 				AFC61D6127DE143E001D6F1E /* View */,
@@ -321,6 +324,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFC61D3327DE13E0001D6F1E /* ViewController.swift in Sources */,
+				AFC61D7D27DF1F76001D6F1E /* extension.swift in Sources */,
 				AFC61D2F27DE13E0001D6F1E /* AppDelegate.swift in Sources */,
 				AFC61D6927DE1471001D6F1E /* Network.swift in Sources */,
 				AFC61D3127DE13E0001D6F1E /* SceneDelegate.swift in Sources */,
