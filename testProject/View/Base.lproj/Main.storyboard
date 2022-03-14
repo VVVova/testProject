@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hm7-p8-egU">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -11,7 +12,7 @@
         <!--Filter View Controller-->
         <scene sceneID="eJw-u4-Xcc">
             <objects>
-                <viewController id="Lzn-1a-DgZ" customClass="FilterViewController" customModule="testProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FilterVC" id="Lzn-1a-DgZ" customClass="FilterViewController" customModule="testProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Heh-ib-jiH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -44,7 +45,7 @@
                                     <constraint firstAttribute="height" constant="7" id="CE4-jf-xEj"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain"/>
+                                <buttonConfiguration key="configuration" style="plain" title=" "/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="5"/>
@@ -111,7 +112,6 @@
                             <color key="tintColor" systemColor="tintColor"/>
                             <connections>
                                 <action selector="filterButtonPressed:" destination="BYZ-38-t0r" id="SkQ-XV-YwS"/>
-                                <segue destination="Lzn-1a-DgZ" kind="modal" identifier="toFilter" id="KYJ-O5-3fq"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -120,6 +120,7 @@
                         <outlet property="filterButton" destination="BSb-dX-aqi" id="YvY-5d-eYW"/>
                         <outlet property="tableView" destination="H3k-RJ-w11" id="fyJ-48-Bha"/>
                         <segue destination="Enq-Hg-2ZS" kind="show" identifier="toPost" id="x2k-HD-kKn"/>
+                        <segue destination="Lzn-1a-DgZ" kind="modal" identifier="toFilter" id="ILv-gA-Gkf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
