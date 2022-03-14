@@ -61,13 +61,62 @@
             <objects>
                 <viewController storyboardIdentifier="Post" id="Enq-Hg-2ZS" customClass="PostViewController" customModule="testProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cgB-0p-9Jp">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v7H-bh-quT">
+                                <rect key="frame" x="0.0" y="88" width="414" height="0.0"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="qLL-pX-NsC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="QjN-xA-lFq">
+                                <rect key="frame" x="0.0" y="88" width="414" height="733.5"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VAn-bu-w8o">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="244.5"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" id="ZYD-iK-FwJ">
+                                        <rect key="frame" x="0.0" y="244.5" width="414" height="245"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </activityIndicatorView>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ry9-DK-lHB">
+                                        <rect key="frame" x="0.0" y="489" width="414" height="244.5"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="Enq-Hg-2ZS" id="EL1-9S-ie9"/>
+                                            <outlet property="delegate" destination="Enq-Hg-2ZS" id="R6p-Ow-TFA"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="qSJ-mR-ThG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="v7H-bh-quT" firstAttribute="top" secondItem="qSJ-mR-ThG" secondAttribute="top" id="Cmj-0o-LE4"/>
+                            <constraint firstItem="v7H-bh-quT" firstAttribute="leading" secondItem="qSJ-mR-ThG" secondAttribute="leading" id="IXg-Pb-Cey"/>
+                            <constraint firstItem="QjN-xA-lFq" firstAttribute="trailing" secondItem="qSJ-mR-ThG" secondAttribute="trailing" id="IpG-cq-CIM"/>
+                            <constraint firstItem="v7H-bh-quT" firstAttribute="trailing" secondItem="qSJ-mR-ThG" secondAttribute="trailing" id="UNb-1d-ed5"/>
+                            <constraint firstItem="QjN-xA-lFq" firstAttribute="leading" secondItem="qSJ-mR-ThG" secondAttribute="leading" id="cgI-LY-POp"/>
+                            <constraint firstItem="QjN-xA-lFq" firstAttribute="top" secondItem="v7H-bh-quT" secondAttribute="bottom" id="fMA-PQ-VAc"/>
+                            <constraint firstItem="qSJ-mR-ThG" firstAttribute="bottom" secondItem="QjN-xA-lFq" secondAttribute="bottom" id="nYi-9D-5Eu"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="aZK-hv-cT1"/>
-                    <size key="freeformSize" width="414" height="1000"/>
+                    <connections>
+                        <outlet property="indicator" destination="ZYD-iK-FwJ" id="L98-Xp-oJ6"/>
+                        <outlet property="tableView" destination="ry9-DK-lHB" id="ccN-3Z-jzt"/>
+                        <outlet property="textView" destination="VAn-bu-w8o" id="t5R-dm-vgr"/>
+                        <outlet property="titlePost" destination="v7H-bh-quT" id="2XS-BG-hqX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aiX-qU-RKH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -94,6 +143,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="secondarySystemGroupedBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

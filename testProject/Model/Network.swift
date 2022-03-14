@@ -103,4 +103,16 @@ class Network{
     func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
         URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
     }
+    func dowloadImage(url:String)->Data?{
+        guard let url = URL.init(string: url)else{return nil}
+        do {
+            let conUrl = try? Data(contentsOf: url)
+            if let imageData = conUrl{
+                return imageData
+            }else{return nil}
+        }catch{
+            print(error.localizedDescription)
+            return nil
+        }
+    }
 }

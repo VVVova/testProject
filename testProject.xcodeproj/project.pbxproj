@@ -26,6 +26,8 @@
 		AFC61D7327DE157C001D6F1E /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC61D7227DE157C001D6F1E /* PostViewController.swift */; };
 		AFC61D7527DE24FB001D6F1E /* ViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC61D7427DE24FB001D6F1E /* ViewController+Extension.swift */; };
 		AFC61D7727DE268A001D6F1E /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC61D7627DE268A001D6F1E /* Globals.swift */; };
+		AFC61D7A27DE757D001D6F1E /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC61D7827DE757D001D6F1E /* ImageTableViewCell.swift */; };
+		AFC61D7B27DE757D001D6F1E /* ImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFC61D7927DE757D001D6F1E /* ImageTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,8 @@
 		AFC61D7227DE157C001D6F1E /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		AFC61D7427DE24FB001D6F1E /* ViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Extension.swift"; sourceTree = "<group>"; };
 		AFC61D7627DE268A001D6F1E /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
+		AFC61D7827DE757D001D6F1E /* ImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
+		AFC61D7927DE757D001D6F1E /* ImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +130,7 @@
 				AFC61D6227DE1445001D6F1E /* ViewModel */,
 				AFC61D6127DE143E001D6F1E /* View */,
 				AFC61D3427DE13E0001D6F1E /* Main.storyboard */,
+				AFC61D7927DE757D001D6F1E /* ImageTableViewCell.xib */,
 				AFC61D6F27DE14F9001D6F1E /* PostTableViewCell.xib */,
 				AFC61D3A27DE13E2001D6F1E /* Assets.xcassets */,
 				AFC61D3C27DE13E2001D6F1E /* LaunchScreen.storyboard */,
@@ -166,6 +171,7 @@
 				AFC61D7427DE24FB001D6F1E /* ViewController+Extension.swift */,
 				AFC61D6E27DE14F9001D6F1E /* PostTableViewCell.swift */,
 				AFC61D7227DE157C001D6F1E /* PostViewController.swift */,
+				AFC61D7827DE757D001D6F1E /* ImageTableViewCell.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -285,6 +291,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFC61D7B27DE757D001D6F1E /* ImageTableViewCell.xib in Resources */,
 				AFC61D3E27DE13E2001D6F1E /* LaunchScreen.storyboard in Resources */,
 				AFC61D3B27DE13E2001D6F1E /* Assets.xcassets in Resources */,
 				AFC61D3627DE13E0001D6F1E /* Main.storyboard in Resources */,
@@ -321,6 +328,7 @@
 				AFC61D6A27DE1471001D6F1E /* RequestDataModel.swift in Sources */,
 				AFC61D6827DE1471001D6F1E /* Content.swift in Sources */,
 				AFC61D6B27DE1471001D6F1E /* DataSourse.swift in Sources */,
+				AFC61D7A27DE757D001D6F1E /* ImageTableViewCell.swift in Sources */,
 				AFC61D7727DE268A001D6F1E /* Globals.swift in Sources */,
 				AFC61D7527DE24FB001D6F1E /* ViewController+Extension.swift in Sources */,
 				AFC61D3927DE13E0001D6F1E /* testProject.xcdatamodeld in Sources */,

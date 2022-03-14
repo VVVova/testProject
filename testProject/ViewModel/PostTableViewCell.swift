@@ -7,7 +7,7 @@
 
 import UIKit
 protocol modifyEventCell{
-    func modify()
+    func modify(sender:AnyObject)
 }
 class PostTableViewCell: UITableViewCell {
     var delegate : modifyEventCell? = nil
@@ -16,8 +16,8 @@ class PostTableViewCell: UITableViewCell {
     @IBOutlet weak var likesCount: UILabel!
     @IBOutlet weak var timeshamp: UILabel!
     @IBOutlet weak var showDetailOutlet: UIButton!
-    @IBAction func showAllTextAction(_ sender: Any) {
-        
+    @IBAction func showAllTextAction(_ sender: AnyObject) {
+        delegate?.modify(sender: sender)
     }
     override func awakeFromNib() {
         super.awakeFromNib()
