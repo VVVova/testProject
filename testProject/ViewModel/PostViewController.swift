@@ -11,7 +11,7 @@ class PostViewController: UIViewController {
     var id : Int? = nil
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var titlePost: UILabel!
-    var content = Content.shared
+    var content = Content.init()
     @IBOutlet weak var textView: UITextView!
     var images : [UIImage] = []
     @IBOutlet weak var indicator: UIActivityIndicatorView!

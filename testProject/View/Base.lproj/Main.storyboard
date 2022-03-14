@@ -8,6 +8,68 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Filter View Controller-->
+        <scene sceneID="eJw-u4-Xcc">
+            <objects>
+                <viewController id="Lzn-1a-DgZ" customClass="FilterViewController" customModule="testProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Heh-ib-jiH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="njd-cT-6fr">
+                                <rect key="frame" x="104" y="112" width="207" height="200"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ifQ-dI-IEf">
+                                        <rect key="frame" x="0.0" y="0.0" width="207" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Filter by date"/>
+                                        <connections>
+                                            <action selector="filterByDatePressed:" destination="Lzn-1a-DgZ" eventType="touchUpInside" id="ozR-r2-RC8"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FMc-lu-DO3">
+                                        <rect key="frame" x="0.0" y="169" width="207" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Filter by rating"/>
+                                        <connections>
+                                            <action selector="filterByRatingPressed:" destination="Lzn-1a-DgZ" eventType="touchUpInside" id="0pW-o5-2ml"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="beG-mV-5Pq">
+                                <rect key="frame" x="174" y="10" width="67" height="7"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="7" id="CE4-jf-xEj"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KqP-cs-DCc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="beG-mV-5Pq" firstAttribute="leading" secondItem="KqP-cs-DCc" secondAttribute="leading" constant="174" id="1mv-gX-OSJ"/>
+                            <constraint firstItem="njd-cT-6fr" firstAttribute="top" secondItem="KqP-cs-DCc" secondAttribute="top" constant="112" id="2Cl-Rn-dxD"/>
+                            <constraint firstItem="KqP-cs-DCc" firstAttribute="bottom" secondItem="njd-cT-6fr" secondAttribute="bottom" constant="496" id="36J-aK-dml"/>
+                            <constraint firstItem="KqP-cs-DCc" firstAttribute="trailing" secondItem="beG-mV-5Pq" secondAttribute="trailing" constant="173" id="GRC-Lz-B4Q"/>
+                            <constraint firstItem="KqP-cs-DCc" firstAttribute="trailing" secondItem="njd-cT-6fr" secondAttribute="trailing" constant="103" id="OxZ-ZF-KPb"/>
+                            <constraint firstItem="njd-cT-6fr" firstAttribute="leading" secondItem="KqP-cs-DCc" secondAttribute="leading" constant="104" id="aRC-1R-Coa"/>
+                            <constraint firstItem="beG-mV-5Pq" firstAttribute="top" secondItem="KqP-cs-DCc" secondAttribute="top" constant="10" id="gMv-4Z-HiY"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="uyf-RU-Sik"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6x4-Y8-fAd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="900.00000000000011" y="-569.19642857142856"/>
+        </scene>
         <!--Главная-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -45,9 +107,17 @@
                     </view>
                     <navigationItem key="navigationItem" title="Главная" id="Isj-oc-hRv">
                         <barButtonItem key="backBarButtonItem" title=" " id="nNJ-5d-fef"/>
+                        <barButtonItem key="rightBarButtonItem" title="Filter" image="slider.horizontal.3" catalog="system" style="plain" id="BSb-dX-aqi">
+                            <color key="tintColor" systemColor="tintColor"/>
+                            <connections>
+                                <action selector="filterButtonPressed:" destination="BYZ-38-t0r" id="SkQ-XV-YwS"/>
+                                <segue destination="Lzn-1a-DgZ" kind="modal" identifier="toFilter" id="KYJ-O5-3fq"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="activityIndicatorLoadDataSource" destination="3zm-fv-PML" id="vGH-vE-sI2"/>
+                        <outlet property="filterButton" destination="BSb-dX-aqi" id="YvY-5d-eYW"/>
                         <outlet property="tableView" destination="H3k-RJ-w11" id="fyJ-48-Bha"/>
                         <segue destination="Enq-Hg-2ZS" kind="show" identifier="toPost" id="x2k-HD-kKn"/>
                     </connections>
@@ -84,7 +154,7 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" id="ZYD-iK-FwJ">
-                                        <rect key="frame" x="0.0" y="244.5" width="414" height="245"/>
+                                        <rect key="frame" x="0.0" y="244.5" width="414" height="244.5"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </activityIndicatorView>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ry9-DK-lHB">
@@ -143,14 +213,21 @@
         </scene>
     </scenes>
     <resources>
+        <image name="slider.horizontal.3" catalog="system" width="128" height="100"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="secondarySystemGroupedBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -7,6 +7,17 @@
 
 import Foundation
 import UIKit
+extension ViewController:modifyEventCell{
+    func modify(sender:AnyObject) {
+        if expandedCells.contains(sender.tag) {
+            expandedCells = expandedCells.filter({ $0 != sender.tag})
+        }
+        else {
+            expandedCells.append(sender.tag)
+            tableView.reloadRows(at: [IndexPath.init(row: sender.tag, section: 0)], with: .none)
+        }
+    }
+}
 extension ViewController : LoadDataProtocol{
     func dataLoaded() {
         settingsDataLoaded()
@@ -32,8 +43,8 @@ extension ViewController{
         }
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            if let target = segue.destination as? PostViewController {
-                target.id = postId
+        if let target = segue.destination as? PostViewController {
+            target.id = postId
         }
     }
 }
@@ -43,6 +54,7 @@ extension ViewController  : UITableViewDelegate,UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        print("test = ",test)
         guard let cell = Bundle.main.loadNibNamed("PostTableViewCell", owner: self, options: nil)?.first as? PostTableViewCell else{
             return UITableViewCell()
         }
@@ -52,8 +64,8 @@ extension ViewController  : UITableViewDelegate,UITableViewDataSource{
         if expandedCells.contains(indexPath.row) {
             cell.showDetailOutlet.isHidden = true
             cell.preview_text.numberOfLines = 100
-        } 
-
+        }
+        
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

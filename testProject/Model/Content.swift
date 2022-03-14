@@ -6,9 +6,7 @@
 //
 
 import Foundation
-class Content : NSObject{
-    static var shared = Content()
-    var postId : Int? = nil
+class Content : NSObject{    
     var network = Network.init()
     var dataSourse : DataSourse
     override init(){
