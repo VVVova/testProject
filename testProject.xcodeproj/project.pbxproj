@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF4159C127DF994A00E17E9C /* PostViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4159C027DF994A00E17E9C /* PostViewController+extension.swift */; };
 		AFC61D2F27DE13E0001D6F1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC61D2E27DE13E0001D6F1E /* AppDelegate.swift */; };
 		AFC61D3127DE13E0001D6F1E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC61D3027DE13E0001D6F1E /* SceneDelegate.swift */; };
 		AFC61D3327DE13E0001D6F1E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC61D3227DE13E0001D6F1E /* ViewController.swift */; };
@@ -50,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AF4159C027DF994A00E17E9C /* PostViewController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PostViewController+extension.swift"; sourceTree = "<group>"; };
 		AFC61D2B27DE13E0001D6F1E /* testProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFC61D2E27DE13E0001D6F1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFC61D3027DE13E0001D6F1E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -174,10 +176,11 @@
 			children = (
 				AFC61D3227DE13E0001D6F1E /* ViewController.swift */,
 				AFC61D7427DE24FB001D6F1E /* ViewController+Extension.swift */,
-				AFC61D6E27DE14F9001D6F1E /* PostTableViewCell.swift */,
-				AFC61D7227DE157C001D6F1E /* PostViewController.swift */,
-				AFC61D7827DE757D001D6F1E /* ImageTableViewCell.swift */,
 				AFC61D7E27DF25EF001D6F1E /* FilterViewController.swift */,
+				AFC61D7227DE157C001D6F1E /* PostViewController.swift */,
+				AF4159C027DF994A00E17E9C /* PostViewController+extension.swift */,
+				AFC61D6E27DE14F9001D6F1E /* PostTableViewCell.swift */,
+				AFC61D7827DE757D001D6F1E /* ImageTableViewCell.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 			files = (
 				AFC61D3327DE13E0001D6F1E /* ViewController.swift in Sources */,
 				AFC61D7D27DF1F76001D6F1E /* extension.swift in Sources */,
+				AF4159C127DF994A00E17E9C /* PostViewController+extension.swift in Sources */,
 				AFC61D2F27DE13E0001D6F1E /* AppDelegate.swift in Sources */,
 				AFC61D6927DE1471001D6F1E /* Network.swift in Sources */,
 				AFC61D3127DE13E0001D6F1E /* SceneDelegate.swift in Sources */,

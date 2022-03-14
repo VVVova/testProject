@@ -9,7 +9,6 @@ import UIKit
 
 class ViewController: UIViewController{    
     var expandedCells = [Int]()
-    var test : String = ""
     var postId : Int? = nil
     var content = Content.init()
     var dataSourse : [Post] = []

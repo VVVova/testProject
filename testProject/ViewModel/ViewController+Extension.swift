@@ -54,7 +54,6 @@ extension ViewController  : UITableViewDelegate,UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        print("test = ",test)
         guard let cell = Bundle.main.loadNibNamed("PostTableViewCell", owner: self, options: nil)?.first as? PostTableViewCell else{
             return UITableViewCell()
         }
