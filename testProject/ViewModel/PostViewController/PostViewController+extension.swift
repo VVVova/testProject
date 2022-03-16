@@ -19,7 +19,7 @@ extension PostViewController : LoadDataProtocol{
         
         if let postContent = self.post{
             DispatchQueue.main.sync {
-                self.titlePost.text = postContent.title ?? ""
+                self.dataSource.append(postTitleCell(text: postContent.title ?? ""))
                 if let postTextCell = postTextTableViewCell(post: postContent){
                     self.dataSource.append(postTextCell)
                     tableView.reloadData()
@@ -59,7 +59,8 @@ extension PostViewController : LoadDataProtocol{
     }
     func errorDataLoad() {
         DispatchQueue.main.sync {
-            titlePost.text = "Ошибка загрузки поста"
+            self.dataSource.append(postTitleCell(text: "Ошибка загрузки поста"))
+            tableView.reloadData()
         }
     }
     func postTextTableViewCell(post:SinglePost)->DetailPostTableViewCell?{
@@ -83,6 +84,13 @@ extension PostViewController : LoadDataProtocol{
             return nil
         }
         cell.imagePost.image = image
+        return cell
+    }
+    func postTitleCell(text:String)->TitleTableViewCell?{
+        guard let cell = Bundle.main.loadNibNamed("TitleTableViewCell", owner: self, options: nil)?.first as? TitleTableViewCell else{
+            return nil
+        }
+        cell.postTitle.text = text
         return cell
     }
 }

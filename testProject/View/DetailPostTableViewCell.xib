@@ -19,7 +19,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ubB-bH-BZo">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="214"/>
+                        <rect key="frame" x="20" y="0.0" width="280" height="214"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <color key="textColor" systemColor="labelColor"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -28,8 +28,8 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="ubB-bH-BZo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="JzY-xJ-7Ge"/>
-                    <constraint firstAttribute="trailing" secondItem="ubB-bH-BZo" secondAttribute="trailing" id="K3J-1J-1zr"/>
-                    <constraint firstItem="ubB-bH-BZo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="QhP-Z5-2Sp"/>
+                    <constraint firstAttribute="trailing" secondItem="ubB-bH-BZo" secondAttribute="trailing" constant="20" id="K3J-1J-1zr"/>
+                    <constraint firstItem="ubB-bH-BZo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="QhP-Z5-2Sp"/>
                     <constraint firstAttribute="bottom" secondItem="ubB-bH-BZo" secondAttribute="bottom" id="qG4-Z3-2ps"/>
                 </constraints>
             </tableViewCellContentView>

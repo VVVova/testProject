@@ -18,16 +18,16 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="imP-mc-ido">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="300"/>
+                        <rect key="frame" x="20" y="10" width="280" height="300"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="300" id="0bF-0n-ojs"/>
                         </constraints>
                     </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="imP-mc-ido" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="b8B-EE-tGP"/>
-                    <constraint firstItem="imP-mc-ido" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="jgD-2Y-iEX"/>
-                    <constraint firstAttribute="trailing" secondItem="imP-mc-ido" secondAttribute="trailing" id="khe-xA-FCH"/>
+                    <constraint firstItem="imP-mc-ido" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="BmN-Sb-skE"/>
+                    <constraint firstItem="imP-mc-ido" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="Gfe-S0-DGa"/>
+                    <constraint firstAttribute="trailing" secondItem="imP-mc-ido" secondAttribute="trailing" constant="20" id="MNi-2V-1em"/>
                     <constraint firstAttribute="bottom" secondItem="imP-mc-ido" secondAttribute="bottom" id="qwH-Ny-tQ3"/>
                 </constraints>
             </tableViewCellContentView>
