@@ -6,18 +6,18 @@
 //
 
 import UIKit
-enum filterMethod :String{
-    case byDate = "FilterByDate"
-    case byRating = "FilterByRating"
+enum sortMethod{
+    case byDate
+    case byRating
 }
-class FilterViewController: UIViewController {
-    public var completion : ((filterMethod) -> Void)?
+class SelectSortViewController: UIViewController {
+    public var completion : ((sortMethod) -> Void)?
     @IBAction func filterByDatePressed(_ sender: Any) {
-        completion?(filterMethod.byDate)
+        completion?(sortMethod.byDate)
         dismiss(animated: true, completion: nil)
     }
     @IBAction func filterByRatingPressed(_ sender: Any) {
-        completion?(filterMethod.byRating)
+        completion?(sortMethod.byRating)
         dismiss(animated: true, completion: nil)
     }
     override func viewDidLoad() {

@@ -31,6 +31,7 @@ extension PostViewController : LoadDataProtocol{
     }
     func getImages(post:SinglePost){
         if let imageUrls = post.images{
+            
             if !imageUrls.isEmpty{
                 var dataImages : [Data?] = []
                 for i in imageUrls{

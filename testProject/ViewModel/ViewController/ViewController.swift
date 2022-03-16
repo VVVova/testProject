@@ -17,7 +17,7 @@ class ViewController: UIViewController{
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var filterButton: UIBarButtonItem!
     @IBAction func filterButtonPressed(_ sender: Any) {
-        guard let vc  = storyboard?.instantiateViewController(withIdentifier: "FilterVC") as? FilterViewController else{return}
+        guard let vc  = storyboard?.instantiateViewController(withIdentifier: "FilterVC") as? SelectSortViewController else{return}
         vc.modalPresentationStyle = .popover
         vc.completion = { [self] filterMethod in
             switch filterMethod{

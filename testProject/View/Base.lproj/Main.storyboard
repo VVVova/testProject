@@ -9,29 +9,29 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Filter View Controller-->
+        <!--Select Sort View Controller-->
         <scene sceneID="eJw-u4-Xcc">
             <objects>
-                <viewController storyboardIdentifier="FilterVC" id="Lzn-1a-DgZ" customClass="FilterViewController" customModule="testProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FilterVC" id="Lzn-1a-DgZ" customClass="SelectSortViewController" customModule="testProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Heh-ib-jiH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="njd-cT-6fr">
-                                <rect key="frame" x="104" y="112" width="207" height="200"/>
+                                <rect key="frame" x="50" y="112" width="314" height="200"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ifQ-dI-IEf">
-                                        <rect key="frame" x="0.0" y="0.0" width="207" height="31"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="31"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Sort by Date"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Сортировка по дате"/>
                                         <connections>
                                             <action selector="filterByDatePressed:" destination="Lzn-1a-DgZ" eventType="touchUpInside" id="ozR-r2-RC8"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FMc-lu-DO3">
-                                        <rect key="frame" x="0.0" y="169" width="207" height="31"/>
+                                        <rect key="frame" x="0.0" y="169" width="314" height="31"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Sort by Rating"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Сортировка за рейтингом"/>
                                         <connections>
                                             <action selector="filterByRatingPressed:" destination="Lzn-1a-DgZ" eventType="touchUpInside" id="0pW-o5-2ml"/>
                                         </connections>
@@ -60,8 +60,8 @@
                             <constraint firstItem="njd-cT-6fr" firstAttribute="top" secondItem="KqP-cs-DCc" secondAttribute="top" constant="112" id="2Cl-Rn-dxD"/>
                             <constraint firstItem="KqP-cs-DCc" firstAttribute="bottom" secondItem="njd-cT-6fr" secondAttribute="bottom" constant="496" id="36J-aK-dml"/>
                             <constraint firstItem="KqP-cs-DCc" firstAttribute="trailing" secondItem="beG-mV-5Pq" secondAttribute="trailing" constant="173" id="GRC-Lz-B4Q"/>
-                            <constraint firstItem="KqP-cs-DCc" firstAttribute="trailing" secondItem="njd-cT-6fr" secondAttribute="trailing" constant="103" id="OxZ-ZF-KPb"/>
-                            <constraint firstItem="njd-cT-6fr" firstAttribute="leading" secondItem="KqP-cs-DCc" secondAttribute="leading" constant="104" id="aRC-1R-Coa"/>
+                            <constraint firstItem="KqP-cs-DCc" firstAttribute="trailing" secondItem="njd-cT-6fr" secondAttribute="trailing" constant="50" id="OxZ-ZF-KPb"/>
+                            <constraint firstItem="njd-cT-6fr" firstAttribute="leading" secondItem="KqP-cs-DCc" secondAttribute="leading" constant="50" id="aRC-1R-Coa"/>
                             <constraint firstItem="beG-mV-5Pq" firstAttribute="top" secondItem="KqP-cs-DCc" secondAttribute="top" constant="10" id="gMv-4Z-HiY"/>
                         </constraints>
                     </view>
@@ -138,16 +138,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="MiY-MN-W8D">
-                                <rect key="frame" x="0.0" y="128" width="414" height="734"/>
+                                <rect key="frame" x="0.0" y="138" width="414" height="724"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Загрузка..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rnz-gK-rS4">
-                                <rect key="frame" x="0.0" y="88" width="414" height="40"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="qvZ-qd-spN"/>
+                                    <constraint firstAttribute="height" constant="50" id="qvZ-qd-spN"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
