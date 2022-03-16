@@ -28,13 +28,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="preview" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HVh-tD-TM6">
-                                <rect key="frame" x="0.0" y="49.5" width="320" height="20.5"/>
+                                <rect key="frame" x="0.0" y="63" width="320" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ney-qz-Pay">
-                                <rect key="frame" x="0.0" y="99" width="320" height="25"/>
+                                <rect key="frame" x="0.0" y="126" width="320" height="25"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="pnn-Wu-dya"/>
@@ -46,8 +46,8 @@
                                     <action selector="showAllTextAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="uO0-FB-0ek"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kj0-Km-M9L">
-                                <rect key="frame" x="0.0" y="152.5" width="320" height="25"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kj0-Km-M9L">
+                                <rect key="frame" x="0.0" y="151" width="320" height="25"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="TwX-GL-Pyv"/>
@@ -55,9 +55,12 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="shift" catalog="system" title=" "/>
+                                <connections>
+                                    <action selector="hideButtonAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="h2Q-Jr-Z0m"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="dsj-Gt-3LW">
-                                <rect key="frame" x="0.0" y="206.5" width="320" height="20.5"/>
+                                <rect key="frame" x="0.0" y="193" width="320" height="20.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="likes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Xl-UK-Gbe">
                                         <rect key="frame" x="0.0" y="0.0" width="34" height="20.5"/>
@@ -95,6 +98,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="hideButtonOutlet" destination="kj0-Km-M9L" id="JFB-8h-ol6"/>
                 <outlet property="likesCount" destination="2Xl-UK-Gbe" id="XSC-pw-BS4"/>
                 <outlet property="preview_text" destination="HVh-tD-TM6" id="n3I-r6-C4J"/>
                 <outlet property="showDetailOutlet" destination="Ney-qz-Pay" id="vDo-b9-nIA"/>

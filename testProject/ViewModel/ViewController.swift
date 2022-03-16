@@ -9,6 +9,7 @@ import UIKit
 
 class ViewController: UIViewController{    
     var expandedCells = [Int]()
+    var hidePreviewCells = [Int]()
     var postId : Int? = nil
     var content = Content.init()
     var dataSourse : [Post] = []

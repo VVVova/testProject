@@ -8,14 +8,22 @@
 import Foundation
 import UIKit
 extension ViewController:modifyEventCell{
-    func modify(sender:AnyObject) {
+    func hidePreview(sender: AnyObject) {
+        if expandedCells.contains(sender.tag){
+            guard let index = expandedCells.index(where: {$0 == sender.tag}) else{
+                return
+            }
+            expandedCells.remove(at: Int(index))
+        }
+        tableView.reloadRows(at: [IndexPath.init(row: sender.tag, section: 0)], with: .fade)
+    }
+    func showPreview(sender:AnyObject) {
         if expandedCells.contains(sender.tag) {
             expandedCells = expandedCells.filter({ $0 != sender.tag})
-            
         }
         else {
             expandedCells.append(sender.tag)
-            tableView.reloadRows(at: [IndexPath.init(row: sender.tag, section: 0)], with: .none)
+            tableView.reloadRows(at: [IndexPath.init(row: sender.tag, section: 0)], with: .fade)
         }
     }
 }
@@ -61,9 +69,11 @@ extension ViewController  : UITableViewDelegate,UITableViewDataSource{
         cell.setData(post: dataSourse[indexPath.row])
         cell.delegate = self
         cell.showDetailOutlet.tag = indexPath.row
+        cell.hideButtonOutlet.tag = indexPath.row
         if expandedCells.contains(indexPath.row) {
             cell.showDetailOutlet.isHidden = true
             cell.preview_text.numberOfLines = 100
+            cell.hideButtonOutlet.isHidden = false
         }
         
         return cell
