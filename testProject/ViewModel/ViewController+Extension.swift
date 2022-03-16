@@ -11,6 +11,7 @@ extension ViewController:modifyEventCell{
     func modify(sender:AnyObject) {
         if expandedCells.contains(sender.tag) {
             expandedCells = expandedCells.filter({ $0 != sender.tag})
+            
         }
         else {
             expandedCells.append(sender.tag)
