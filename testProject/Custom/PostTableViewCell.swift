@@ -47,8 +47,8 @@ class PostTableViewCell: UITableViewCell {
         }
     }
     private func dateDiff(time:Int)->String{
-        var date = Date(timeIntervalSince1970: TimeInterval(time))
-        var dateNow = Date()
+        let date = Date(timeIntervalSince1970: TimeInterval(time))
+        let dateNow = Date()
         let dateDiffYears = Calendar.current.dateComponents([.year], from: date, to: dateNow).year
         var dateAgo = ""
         if let year = dateDiffYears{

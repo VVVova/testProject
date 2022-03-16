@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		AF4159C127DF994A00E17E9C /* PostViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4159C027DF994A00E17E9C /* PostViewController+extension.swift */; };
+		AF4159D327E2276100E17E9C /* DetailPostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4159D127E2276100E17E9C /* DetailPostTableViewCell.swift */; };
+		AF4159D427E2276100E17E9C /* DetailPostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF4159D227E2276100E17E9C /* DetailPostTableViewCell.xib */; };
+		AF4159D727E2280B00E17E9C /* ImagePostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4159D527E2280B00E17E9C /* ImagePostTableViewCell.swift */; };
+		AF4159D827E2280B00E17E9C /* ImagePostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF4159D627E2280B00E17E9C /* ImagePostTableViewCell.xib */; };
 		AFC61D2F27DE13E0001D6F1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC61D2E27DE13E0001D6F1E /* AppDelegate.swift */; };
 		AFC61D3127DE13E0001D6F1E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC61D3027DE13E0001D6F1E /* SceneDelegate.swift */; };
 		AFC61D3327DE13E0001D6F1E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC61D3227DE13E0001D6F1E /* ViewController.swift */; };
@@ -52,6 +56,10 @@
 
 /* Begin PBXFileReference section */
 		AF4159C027DF994A00E17E9C /* PostViewController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PostViewController+extension.swift"; sourceTree = "<group>"; };
+		AF4159D127E2276100E17E9C /* DetailPostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPostTableViewCell.swift; sourceTree = "<group>"; };
+		AF4159D227E2276100E17E9C /* DetailPostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailPostTableViewCell.xib; sourceTree = "<group>"; };
+		AF4159D527E2280B00E17E9C /* ImagePostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePostTableViewCell.swift; sourceTree = "<group>"; };
+		AF4159D627E2280B00E17E9C /* ImagePostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImagePostTableViewCell.xib; sourceTree = "<group>"; };
 		AFC61D2B27DE13E0001D6F1E /* testProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFC61D2E27DE13E0001D6F1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFC61D3027DE13E0001D6F1E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +114,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF4159CD27E2251200E17E9C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AFC61D3227DE13E0001D6F1E /* ViewController.swift */,
+				AFC61D7427DE24FB001D6F1E /* ViewController+Extension.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		AF4159CE27E2252100E17E9C /* PostViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AFC61D7227DE157C001D6F1E /* PostViewController.swift */,
+				AF4159C027DF994A00E17E9C /* PostViewController+extension.swift */,
+			);
+			path = PostViewController;
+			sourceTree = "<group>";
+		};
+		AF4159CF27E2252E00E17E9C /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				AFC61D6E27DE14F9001D6F1E /* PostTableViewCell.swift */,
+				AFC61D7827DE757D001D6F1E /* ImageTableViewCell.swift */,
+				AF4159D127E2276100E17E9C /* DetailPostTableViewCell.swift */,
+				AF4159D527E2280B00E17E9C /* ImagePostTableViewCell.swift */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		AF4159D027E2254300E17E9C /* FilterViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AFC61D7E27DF25EF001D6F1E /* FilterViewController.swift */,
+			);
+			path = FilterViewController;
+			sourceTree = "<group>";
+		};
 		AFC61D2227DE13E0001D6F1E = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +178,7 @@
 				AFC61D3027DE13E0001D6F1E /* SceneDelegate.swift */,
 				AFC61D7627DE268A001D6F1E /* Globals.swift */,
 				AFC61D7C27DF1F76001D6F1E /* extension.swift */,
+				AF4159CF27E2252E00E17E9C /* Custom */,
 				AFC61D6327DE144F001D6F1E /* Model */,
 				AFC61D6227DE1445001D6F1E /* ViewModel */,
 				AFC61D6127DE143E001D6F1E /* View */,
@@ -167,6 +213,8 @@
 				AFC61D3427DE13E0001D6F1E /* Main.storyboard */,
 				AFC61D7927DE757D001D6F1E /* ImageTableViewCell.xib */,
 				AFC61D6F27DE14F9001D6F1E /* PostTableViewCell.xib */,
+				AF4159D227E2276100E17E9C /* DetailPostTableViewCell.xib */,
+				AF4159D627E2280B00E17E9C /* ImagePostTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -174,13 +222,9 @@
 		AFC61D6227DE1445001D6F1E /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				AFC61D3227DE13E0001D6F1E /* ViewController.swift */,
-				AFC61D7427DE24FB001D6F1E /* ViewController+Extension.swift */,
-				AFC61D7E27DF25EF001D6F1E /* FilterViewController.swift */,
-				AFC61D7227DE157C001D6F1E /* PostViewController.swift */,
-				AF4159C027DF994A00E17E9C /* PostViewController+extension.swift */,
-				AFC61D6E27DE14F9001D6F1E /* PostTableViewCell.swift */,
-				AFC61D7827DE757D001D6F1E /* ImageTableViewCell.swift */,
+				AF4159CE27E2252100E17E9C /* PostViewController */,
+				AF4159CD27E2251200E17E9C /* ViewController */,
+				AF4159D027E2254300E17E9C /* FilterViewController */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -302,7 +346,9 @@
 			files = (
 				AFC61D7B27DE757D001D6F1E /* ImageTableViewCell.xib in Resources */,
 				AFC61D3E27DE13E2001D6F1E /* LaunchScreen.storyboard in Resources */,
+				AF4159D427E2276100E17E9C /* DetailPostTableViewCell.xib in Resources */,
 				AFC61D3B27DE13E2001D6F1E /* Assets.xcassets in Resources */,
+				AF4159D827E2280B00E17E9C /* ImagePostTableViewCell.xib in Resources */,
 				AFC61D3627DE13E0001D6F1E /* Main.storyboard in Resources */,
 				AFC61D7127DE14F9001D6F1E /* PostTableViewCell.xib in Resources */,
 			);
@@ -330,6 +376,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFC61D3327DE13E0001D6F1E /* ViewController.swift in Sources */,
+				AF4159D727E2280B00E17E9C /* ImagePostTableViewCell.swift in Sources */,
 				AFC61D7D27DF1F76001D6F1E /* extension.swift in Sources */,
 				AF4159C127DF994A00E17E9C /* PostViewController+extension.swift in Sources */,
 				AFC61D2F27DE13E0001D6F1E /* AppDelegate.swift in Sources */,
@@ -342,6 +389,7 @@
 				AFC61D7F27DF25EF001D6F1E /* FilterViewController.swift in Sources */,
 				AFC61D7A27DE757D001D6F1E /* ImageTableViewCell.swift in Sources */,
 				AFC61D7727DE268A001D6F1E /* Globals.swift in Sources */,
+				AF4159D327E2276100E17E9C /* DetailPostTableViewCell.swift in Sources */,
 				AFC61D7527DE24FB001D6F1E /* ViewController+Extension.swift in Sources */,
 				AFC61D3927DE13E0001D6F1E /* testProject.xcdatamodeld in Sources */,
 				AFC61D7027DE14F9001D6F1E /* PostTableViewCell.swift in Sources */,
